@@ -1,0 +1,8 @@
+{
+  "domain": "unified_remote",
+  "name": "UnifiedRemote",
+  "documentation": "TODO",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": ["@melnichevv"]
+}

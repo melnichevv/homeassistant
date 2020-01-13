@@ -1,0 +1,52 @@
+
+default_config:
+
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+xiaomi_aqara:
+  discovery_retry: 5
+  gateways:
+    - key: !secret xiaomi_aqara_discovery_key
+
+media_player:
+  - platform: gpmdp
+    host: !secret gpmdp_pc
+
+lovelace:
+  mode: yaml
+
+asuswrt:
+  host: !secret asuswrt_gateway
+  username: admin
+  ssh_key: /config/id_rsa
+  sensors:
+    - upload
+    - download
+    - upload_speed
+    - download_speed
+
+remote:
+  - platform: unified_remote
+    host: !secret unified_remote_laptop_ip
+    port: 9510
+    name: Laptop
+    username: !secret unified_remote_laptop_username
+    password: !secret unified_remote_laptop_password
+  - platform: unified_remote
+    host: !secret unified_remote_pc_ip
+    name: PC
+
+
+logger:
+  default: debug
+  logs:
+    homeassistant.core: debug
+    nest.nest: debug
+    asyncio: debug
+    homeassistant.components.cloud.iot: debug

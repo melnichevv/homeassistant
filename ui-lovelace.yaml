@@ -1,0 +1,76 @@
+title: Lovelace
+views:
+  - title: Home
+    path: home
+    icon: mdi:home-account
+    badges:
+      - entity: binary_sensor.updater
+      - entity: binary_sensor.switch_158d000205b9b6
+      - entity: binary_sensor.cube_158d00028f740e
+      - entity: binary_sensor.remote_ui
+      - entity: person.vladimir
+      - entity: sensor.humidity_158d0001218a1f
+      - entity: sensor.illumination_286c07fa3769
+      - entity: sensor.temperature_158d0001218a1f
+      - entity: sun.sun
+    cards:
+      - type: entities
+        entities:
+          - light.hue_white_lamp_2
+          - light.hue_white_lamp_1
+          - light.hue_white_lamp_3
+        title: My room
+        show_header_toggle: true
+      - type: entities
+        entities:
+          - automation.turn_on_lights_in_my_room
+        title: Automation
+      - type: entities
+        entities:
+          - light.gateway_light_286c07fa3769
+          - light.my_room
+        title: Light
+      - type: media-control
+        entity: media_player.gpm_desktop_player
+      - type: entities
+        entities:
+          - switch.wall_switch_right_158d0002c0f2e0
+          - switch.wall_switch_left_158d0002ebb28f
+          - switch.wall_switch_right_158d0002ebb28f
+          - switch.wall_switch_left_158d0002c0f2e0
+          - switch.wall_switch_158d0002b5a1d4
+        title: Switch
+      - type: weather-forecast
+        entity: weather.lyubimova_home
+      - type: entities
+        title: Asus Router
+        show_header_toggle: false
+        entities:
+          - sensor.asuswrt_download
+          - sensor.asuswrt_upload
+          - sensor.asuswrt_download_speed
+          - sensor.asuswrt_upload_speed
+  - title: Car
+    path: car
+    icon: mdi:car-hatchback
+    cards: 
+      - type: entities
+        entities:
+          - binary_sensor.signalizatsiia_starline_hood
+          - binary_sensor.signalizatsiia_starline_alarm
+          - binary_sensor.signalizatsiia_starline_trunk
+          - binary_sensor.signalizatsiia_starline_hand_brake
+          - binary_sensor.signalizatsiia_starline_doors
+          - sensor.signalizatsiia_starline_interior_temperature
+          - sensor.signalizatsiia_starline_gsm_signal
+          - sensor.signalizatsiia_starline_balance
+          - sensor.signalizatsiia_starline_battery
+          - sensor.signalizatsiia_starline_engine_temperature
+          - lock.signalizatsiia_starline_security
+          - switch.signalizatsiia_starline_horn
+          - switch.signalizatsiia_starline_additional_channel
+          - switch.signalizatsiia_starline_webasto
+          - switch.signalizatsiia_starline_engine
+          - device_tracker.signalizatsiia_starline_location
+        title: Car
+        show_header_toggle: true

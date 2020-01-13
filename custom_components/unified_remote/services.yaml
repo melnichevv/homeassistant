@@ -1,0 +1,19 @@
+trigger_command:
+  description: Send command to remote.
+  fields:
+    entity_id:
+      description: Entity name to send command from.
+      example: 'remote.laptop'
+    id:
+      description: ID (remote name)
+      example: 'Chrome'
+    run:
+      description: Run (remote command)
+      example: 'new_tab'
+    username:
+      description: Username (optional)
+      example: 'new_tab'
+    password:
+      description: Password (optional)
+      example: 'new_tab'
+
