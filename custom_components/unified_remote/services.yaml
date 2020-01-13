@@ -10,10 +10,4 @@ trigger_command:
     run:
       description: Run (remote command)
       example: 'new_tab'
-    username:
-      description: Username (optional)
-      example: 'new_tab'
-    password:
-      description: Password (optional)
-      example: 'new_tab'
 
