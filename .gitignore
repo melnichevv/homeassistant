@@ -6,3 +6,6 @@ home-assistant_v2.db
 id_rsa
 id_rsa.pub
 known_devices.yaml
+.cloud/
+.idea/
+.vscode/
